@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-labs-dark text-labs-text font-sans antialiased;
+}
+
+.section {
+  @apply py-24 overflow-hidden;
+}
+
+.container {
+  @apply mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl;
+}
+
+.heading {
+  @apply text-4xl md:text-5xl font-bold mb-6 text-white;
+}
+
+.subheading {
+  @apply text-xl md:text-2xl font-light mb-8 text-labs-text;
+}
+
+.paragraph {
+  @apply text-base md:text-lg leading-relaxed mb-6 text-labs-text;
+}
+
+.nav-link {
+  @apply text-labs-text hover:text-labs-green transition-colors duration-300 px-4 py-2;
+}
+
+.nav-link.active {
+  @apply text-labs-green;
+}
+
+.cyber-section {
+  @apply bg-cyber-dark text-labs-text;
+}
+
+.cyber-section::before {
+  content: '';
+  @apply absolute inset-0 bg-tech-pattern opacity-5 z-0;
+  filter: hue-rotate(240deg) saturate(200%);
+}
+
+.cyber-section .heading {
+  @apply text-white;
+}
+
+.cyber-section .subheading {
+  @apply text-labs-text;
+}
+
+.cyber-button {
+  @apply bg-cyber-blue text-white hover:bg-opacity-90 transition-all;
+}
+
+.labs-button {
+  @apply bg-labs-green text-labs-dark hover:bg-opacity-90 transition-all;
+}
+
+.button {
+  @apply inline-block px-6 py-3 rounded-lg text-base font-medium tracking-wide shadow-lg transform hover:-translate-y-1 transition-all duration-300;
+}
+
+/* Parallax background effect */
+.parallax-bg {
+  @apply fixed top-0 left-0 w-full h-full bg-tech-pattern opacity-5 z-0 bg-center bg-cover;
+  transform: translateZ(-10px) scale(2);
+}
+
+/* Tech overlay */
+.tech-overlay {
+  @apply absolute top-0 left-0 w-full h-full bg-labs-dark opacity-80 z-[-1];
+}
+
+/* Section transitions */
+.section-transition {
+  @apply transition-all duration-500 ease-in-out;
+}
+
+/* Section container */
+.section-container {
+  @apply relative z-10;
+}
+
+.feature-item {
+  @apply flex items-center mb-4;
+}
+
+.feature-check {
+  @apply text-labs-green mr-2 flex-shrink-0;
+}
+
+.cyber-feature-check {
+  @apply text-cyber-blue mr-2 flex-shrink-0;
+}
+
+/* Section scroll margins */
+#contact {
+  scroll-margin-top: 6rem;
+}
+
+#coming-soon {
+  @apply mb-24;
+}
+
+/* Back to top button */
+.back-to-top {
+  @apply fixed bottom-8 right-8 p-3 bg-labs-dark hover:bg-labs-green hover:bg-opacity-10 rounded-full transition-colors z-50;
+}
+
+.active-cyber {
+  @apply text-cyber-blue;
+}
