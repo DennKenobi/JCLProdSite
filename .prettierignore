@@ -1,0 +1,15 @@
+# Ignore build output
+dist
+build
+
+# Ignore dependencies
+node_modules
+
+# Ignore versioned files or exports
+public
+*.min.js
+*.min.css
+
+# Ignore config or legacy files
+*.lock
+coverage
