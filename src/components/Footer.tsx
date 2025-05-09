@@ -69,14 +69,14 @@ const Footer: React.FC<FooterProps> = ({ variant = 'default' }) => {
         <footer
             className={`${isCyber ? 'bg-cyber-dark text-cyber-blue' : 'bg-labs-dark text-labs-muted'} relative mt-12 border-t border-gray-800 py-2`}
         >
-            <div className="container mx-auto px-4">
+            <div className="container mx-auto px-20">
                 <div className="flex flex-col items-center justify-between md:flex-row">
-                    <div className="mb-6 flex items-center md:mb-0">
+                    <div className="mb-12 flex items-center md:mb-4">
                         <Link to="/">
                             <img
                                 src={Logo}
                                 alt="Just Create Labs"
-                                className="h-14 w-auto md:h-16"
+                                className="h-8 w-auto md:h-8"
                             />
                         </Link>
                     </div>
