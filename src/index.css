@@ -118,3 +118,7 @@ body {
 .active-cyber {
     @apply text-cyber-blue;
 }
+
+html {
+    scroll-behavior: smooth;
+}

@@ -42,57 +42,66 @@ import About from './pages/About';
 import CyberDivision from './pages/CyberDivision';
 import ComingSoon from './pages/ComingSoon';
 import Contact from './pages/Contact';
+import CISOTService from './pages/CISOTService';
 
 function App() {
-  return (
-    <Router>
-      <Routes>
-        {/* Default layout for normal pages */}
-        <Route
-          path="/"
-          element={
-            <Layout>
-              <Home />
-            </Layout>
-          }
-        />
-        <Route
-          path="/about"
-          element={
-            <Layout>
-              <About />
-            </Layout>
-          }
-        />
-        <Route
-          path="/next"
-          element={
-            <Layout>
-              <ComingSoon />
-            </Layout>
-          }
-        />
-        <Route
-          path="/contact"
-          element={
-            <Layout>
-              <Contact />
-            </Layout>
-          }
-        />
-        
-        {/* CyberDivision with custom layout variant */}
-        <Route
-          path="/cyber"
-          element={
-            <Layout variant="cyber">
-              <CyberDivision />
-            </Layout>
-          }
-        />
-      </Routes>
-    </Router>
-  );
+    return (
+        <Router>
+            <Routes>
+                {/* Default layout for normal pages */}
+                <Route
+                    path="/"
+                    element={
+                        <Layout>
+                            <Home />
+                        </Layout>
+                    }
+                />
+                <Route
+                    path="/about"
+                    element={
+                        <Layout>
+                            <About />
+                        </Layout>
+                    }
+                />
+                <Route
+                    path="/next"
+                    element={
+                        <Layout>
+                            <ComingSoon />
+                        </Layout>
+                    }
+                />
+                <Route
+                    path="/contact"
+                    element={
+                        <Layout>
+                            <Contact />
+                        </Layout>
+                    }
+                />
+
+                {/* CyberDivision with custom layout variant */}
+                <Route
+                    path="/cyber"
+                    element={
+                        <Layout variant="cyber">
+                            <CyberDivision />
+                        </Layout>
+                    }
+                />
+                <Route
+                    path="/cyber/cisot"
+                    element={
+                        <Layout variant="cyber">
+                            <CISOTService />
+                        </Layout>
+                    }
+                />
+            </Routes>
+        </Router>
+    );
 }
 
 export default App;

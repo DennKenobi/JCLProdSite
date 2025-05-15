@@ -31,7 +31,9 @@ const Header: React.FC<HeaderProps> = ({ variant = 'default' }) => {
                 ? 'bg-cyber-dark shadow-lg py-2'
                 : 'bg-labs-dark bg-opacity-95 shadow-lg py-2'
             : variant === 'cyber'
-              ? 'bg-transparent text-cyber-blue py-4'
+              ? location.pathname.startsWith('/cyber/cisot')
+                  ? 'bg-black text-green-500 py-4'
+                  : 'bg-transparent text-cyber-blue py-4'
               : 'bg-transparent text-green-500 py-4'
     }`;
 
