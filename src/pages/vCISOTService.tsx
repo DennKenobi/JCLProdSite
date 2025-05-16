@@ -17,7 +17,7 @@ import { useNavigate } from 'react-router-dom';
 //import CyberLogo from '../assets/CyberDivisionHorizonTransp.png';
 //import ParallaxBackground from '../components/ParallaxBackground';
 import vCISOTBadge from '../assets/vCISOTBadge.svg';
-import BackgroundImage from '../assets/CISOT-BG-Image.jpg';
+import BackgroundImage from '../assets/vCISOT-BG-Image.jpg';
 import { useScrollSpy } from '../hooks/useScrollSpy';
 
 // Placeholder for CISOT badge - replace with actual asset
@@ -160,10 +160,17 @@ function VCISOTService() {
                                             <hr className="my-8 h-0.5 w-full border-0 bg-[#4b7a4e] opacity-40" />
                                             <h1 className="text-4xl font-bold text-white md:text-5xl">
                                                 <span className="text-[#4b7a4e] drop-shadow-[-1px_2px_2px_#b87333]">
-                                                    vCISOT™
+                                                    <span className="text-[#b87333]">
+                                                        v
+                                                    </span>
+                                                    CISOT™
                                                 </span>
                                             </h1>
+
                                             <h2 className="mt-2 text-2xl font-medium text-white md:text-3xl">
+                                                <span className="text-xl font-bold text-[#b87333]">
+                                                    virtual{' '}
+                                                </span>
                                                 Chief of Information Security
                                                 for OT
                                             </h2>
@@ -179,7 +186,7 @@ function VCISOTService() {
                                     >
                                         <div
                                             id="what-is"
-                                            className="scroll-mt-[140px]"
+                                            className="scroll-mt-[140px] rounded-md bg-[#010a02] bg-opacity-40 p-6 backdrop-blur-[20px]"
                                         >
                                             <h3 className="mb-4 text-xl font-bold text-[#b87333]">
                                                 What is the vCISOT™?
@@ -204,7 +211,7 @@ function VCISOTService() {
 
                                         <div
                                             id="why-needed"
-                                            className="scroll-mt-[140px]"
+                                            className="scroll-mt-[140px] rounded-md bg-[#010a02] bg-opacity-40 p-6 backdrop-blur-[20px]"
                                         >
                                             <h3 className="mb-4 text-xl font-bold text-[#b87333]">
                                                 Why It’s Needed
@@ -236,7 +243,7 @@ function VCISOTService() {
 
                                         <div
                                             id="philosophy"
-                                            className="scroll-mt-[140px]"
+                                            className="scroll-mt-[140px] rounded-md bg-[#010a02] bg-opacity-40 p-6 backdrop-blur-[20px]"
                                         >
                                             <h3 className="mb-4 text-xl font-bold text-[#b87333]">
                                                 The Philosophy
@@ -832,9 +839,18 @@ function VCISOTService() {
 
                                         <div className="mb-16 scroll-mt-[140px] rounded-lg border border-[#4b7a4e] border-opacity-60 bg-[#010a02] bg-opacity-80 p-8 text-center">
                                             <h3 className="mb-6 text-2xl font-bold text-white">
-                                                Hire one. Appoint one. Become
-                                                one. <br /> Or start with a
-                                                vCISOT™.
+                                                Consider a{' '}
+                                                <span className="font-bold text-[#b87333] drop-shadow-[0px_0px_20px_#b87333]">
+                                                    vCISOT™
+                                                </span>{' '}
+                                                as your strategic partner for OT
+                                                cybersecurity. <br />
+                                                <br />
+                                                Or explore the full-time{' '}
+                                                <span className="font-bold text-[#f4a100] drop-shadow-[0px_0px_20px_#f4a100]">
+                                                    CISOT™
+                                                </span>
+                                                .
                                             </h3>
 
                                             <div className="flex flex-col justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
@@ -842,9 +858,13 @@ function VCISOTService() {
                                                     onClick={() =>
                                                         navigate('/contact')
                                                     }
-                                                    className="button rounded-md bg-[#4b7a4e] px-6 py-3 font-semibold text-white transition-colors duration-300 hover:bg-[#2aa63a]"
+                                                    className="button rounded-md border-[2px] border-[#b87333] bg-[#4b7a4e] bg-opacity-30 px-6 py-3 font-extrabold text-[#b87333] transition-colors duration-300 hover:border-[#4b7a4e] hover:bg-[#b87333] hover:text-white hover:opacity-80"
                                                 >
-                                                    Contact Us About vCISOT™
+                                                    <span className="text-semibold text-[#f0f0f0]">
+                                                        {' '}
+                                                        Contact Us About
+                                                    </span>{' '}
+                                                    vCISOT™
                                                 </button>
 
                                                 <button
@@ -853,12 +873,9 @@ function VCISOTService() {
                                                             '/cyber/vcisot',
                                                         )
                                                     }
-                                                    className="button rounded-md border border-[#b87333] px-6 py-3 font-semibold text-white transition-colors duration-300 hover:bg-[#b87333]/20 hover:text-white"
+                                                    className="button rounded-md border-[2px] border-[#208e2e] px-6 py-3 font-semibold text-[#208e2e] transition-colors duration-300 hover:bg-[#208e2e]/80 hover:text-white"
                                                 >
-                                                    Learn About{' '}
-                                                    <span className="font-bold text-[#b87333] hover:text-white">
-                                                        vCISOT™
-                                                    </span>
+                                                    Learn About CISOT™
                                                 </button>
                                             </div>
                                         </div>
