@@ -43,6 +43,7 @@ import CyberDivision from './pages/CyberDivision';
 import ComingSoon from './pages/ComingSoon';
 import Contact from './pages/Contact';
 import CISOTService from './pages/CISOTService';
+import VCISOTService from './pages/vCISOTService';
 
 function App() {
     return (
@@ -96,6 +97,14 @@ function App() {
                     element={
                         <Layout variant="cyber">
                             <CISOTService />
+                        </Layout>
+                    }
+                />
+                <Route
+                    path="/cyber/vcisot"
+                    element={
+                        <Layout variant="cyber">
+                            <VCISOTService />
                         </Layout>
                     }
                 />
