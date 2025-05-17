@@ -43,6 +43,10 @@ function VCISOTService() {
     ];
 
     const activeId = useScrollSpy(sectionRefs, 200); // 200 = top offset for nav height
+    const mainBadgeRef = useRef(null);
+    const showMiniBadge = !useIntersectionObserver(mainBadgeRef, {
+        threshold: 0.87,
+    });
 
     return (
         <>
@@ -67,8 +71,19 @@ function VCISOTService() {
                 >
                     <div className="mx-auto flex max-w-screen-xl flex-col gap-0 px-6 pt-2 lg:flex-row">
                         {/* Left Sidebar Navigation */}
-                        <aside className="sticky top-24 hidden h-[calc(100vh-6rem)] w-64 overflow-y-auto px-2 pt-60 text-sm text-[#b0b0b0] lg:block">
+                        <aside className="sticky top-0 hidden h-[calc(100vh-6rem)] w-64 overflow-y-auto px-2 pt-60 text-sm text-[#b0b0b0] lg:block">
                             {/* <aside className="sticky top-36 mt-52 hidden self-start px-2 text-sm text-[#b0b0b0] lg:block lg:w-1/5"> */}
+                            {/* Mini Badge (appears when main badge scrolls out of view) */}
+                            <div
+                                className={`mb-6 transition-opacity duration-1000 ${showMiniBadge ? 'opacity-100' : 'opacity-0'}`}
+                            >
+                                <img
+                                    src={vCISOTBadge}
+                                    alt="Mini vCISOT Badge"
+                                    className="ml-4 h-[8rem] w-auto opacity-70"
+                                />
+                            </div>
+                            <hr className="my-4 border-t border-[#444]" />
                             <nav className="space-y-4">
                                 <a
                                     href="#responsibilities"
@@ -98,7 +113,7 @@ function VCISOTService() {
                                             : 'border-transparent text-[#b0b0b0]'
                                     } hover:border-[#4b7a4e] hover:font-semibold hover:text-white`}
                                 >
-                                    vCISOT™ vs. Typical OT Lead
+                                    vCISOT™ vs. CISOT™
                                 </a>
                                 <a
                                     href="#success"
@@ -151,7 +166,10 @@ function VCISOTService() {
                                 >
                                     {/* Hero Section */}
                                     <div className="mb-12 flex flex-col items-center">
-                                        <div className="mb-2 flex flex-col items-center text-center">
+                                        <div
+                                            ref={mainBadgeRef}
+                                            className="mb-2 flex flex-col items-center text-center"
+                                        >
                                             <img
                                                 src={vCISOTBadge}
                                                 alt="vCISOT Badge"
@@ -1468,11 +1486,15 @@ function VCISOTService() {
                                                 </button>
 
                                                 <button
-                                                    onClick={() =>
+                                                    onClick={() => {
                                                         navigate(
-                                                            '/cyber/vcisot',
-                                                        )
-                                                    }
+                                                            '/cyber/cisot',
+                                                        );
+                                                        window.scrollTo({
+                                                            top: 0,
+                                                            behavior: 'smooth',
+                                                        });
+                                                    }}
                                                     className="button rounded-md border-[2px] border-[#208e2e] px-6 py-3 font-semibold text-[#208e2e] transition-colors duration-300 hover:bg-[#208e2e]/80 hover:text-white"
                                                 >
                                                     Learn About CISOT™

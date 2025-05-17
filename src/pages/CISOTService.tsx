@@ -43,6 +43,10 @@ const CISOTService: React.FC = () => {
     ];
 
     const activeId = useScrollSpy(sectionRefs, 200); // 200 = top offset for nav height
+    const mainBadgeRef = useRef(null);
+    const showMiniBadge = !useIntersectionObserver(mainBadgeRef, {
+        threshold: 0.87,
+    });
 
     return (
         <>
@@ -69,6 +73,18 @@ const CISOTService: React.FC = () => {
                         {/* Left Sidebar Navigation */}
                         <aside className="sticky top-24 hidden h-[calc(100vh-6rem)] w-64 overflow-y-auto px-2 pt-60 text-sm text-[#b0b0b0] lg:block">
                             {/* <aside className="sticky top-36 mt-52 hidden self-start px-2 text-sm text-[#b0b0b0] lg:block lg:w-1/5"> */}
+                            {/* Mini Badge (appears when main badge scrolls out of view) */}
+                            <div
+                                className={`mb-6 transition-opacity duration-1000 ${showMiniBadge ? 'opacity-100' : 'opacity-0'}`}
+                            >
+                                <img
+                                    src={CISOTBadge}
+                                    alt="Mini CISOT Badge"
+                                    className="ml-4 h-[8rem] w-auto opacity-70"
+                                />
+                            </div>
+
+                            <hr className="my-4 border-t border-[#444]" />
                             <nav className="space-y-4">
                                 <a
                                     href="#responsibilities"
@@ -151,7 +167,10 @@ const CISOTService: React.FC = () => {
                                 >
                                     {/* Hero Section */}
                                     <div className="mb-12 flex flex-col items-center">
-                                        <div className="mb-2 flex flex-col items-center text-center">
+                                        <div
+                                            ref={mainBadgeRef}
+                                            className="mb-2 flex flex-col items-center text-center"
+                                        >
                                             <img
                                                 src={CISOTBadge}
                                                 alt="CISOT Badge"
@@ -787,11 +806,15 @@ const CISOTService: React.FC = () => {
                                                 </button>
 
                                                 <button
-                                                    onClick={() =>
+                                                    onClick={() => {
                                                         navigate(
                                                             '/cyber/vcisot',
-                                                        )
-                                                    }
+                                                        );
+                                                        window.scrollTo({
+                                                            top: 0,
+                                                            behavior: 'smooth',
+                                                        });
+                                                    }}
                                                     className="button rounded-md border border-[#b87333] px-6 py-3 font-semibold text-white transition-colors duration-300 hover:bg-[#b87333]/20 hover:text-white"
                                                 >
                                                     Learn About{' '}

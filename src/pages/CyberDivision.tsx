@@ -190,9 +190,13 @@ const CyberDivision: React.FC = () => {
                                                 industrial environments.
                                             </blockquote>
                                             <div className="border-t border-cyber-blue pt-3 text-xs font-semibold text-cyber-blue">
-                                                Coming soon — a dedicated
-                                                in-depth page on the CISOT
-                                                service!
+                                                <a
+                                                    href="/cyber/cisot"
+                                                    className="text-base font-semibold text-[#208e2e] underline transition-colors duration-300 hover:text-green-400"
+                                                >
+                                                    Learn more about the CISOT™
+                                                    role
+                                                </a>
                                             </div>
                                         </div>
                                     )}
@@ -257,9 +261,13 @@ const CyberDivision: React.FC = () => {
                                                 scalability for the business.
                                             </blockquote>
                                             <div className="border-t border-cyber-blue pt-3 text-xs font-semibold text-cyber-blue">
-                                                Coming soon — a dedicated
-                                                in-depth page on the vCISOT
-                                                service!
+                                                <a
+                                                    href="/cyber/vcisot"
+                                                    className="text-base font-semibold text-[#b87333] underline transition-colors duration-300 hover:text-amber-400"
+                                                >
+                                                    Learn more about the
+                                                    vCISOT™ role
+                                                </a>
                                             </div>
                                         </div>
                                     )}
@@ -271,7 +279,7 @@ const CyberDivision: React.FC = () => {
                                     onClick={() => navigate('/contact')}
                                     className="button cyber-button"
                                 >
-                                    Learn More About Our Cyber Services
+                                    Contact Us to Learn More!
                                 </button>
                             </div>
                         </div>
