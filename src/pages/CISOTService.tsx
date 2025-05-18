@@ -71,7 +71,7 @@ const CISOTService: React.FC = () => {
                 >
                     <div className="mx-auto flex max-w-screen-xl flex-col gap-0 px-6 pt-2 lg:flex-row">
                         {/* Left Sidebar Navigation */}
-                        <aside className="sticky top-24 hidden h-[calc(100vh-6rem)] w-64 overflow-y-auto px-2 pt-60 text-sm text-[#b0b0b0] lg:block">
+                        <aside className="sticky top-0 hidden h-[calc(100vh-6rem)] w-64 overflow-y-auto px-2 pt-60 text-sm text-[#b0b0b0] lg:block">
                             {/* <aside className="sticky top-36 mt-52 hidden self-start px-2 text-sm text-[#b0b0b0] lg:block lg:w-1/5"> */}
                             {/* Mini Badge (appears when main badge scrolls out of view) */}
                             <div

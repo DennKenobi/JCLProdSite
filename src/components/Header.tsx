@@ -89,6 +89,7 @@ const Header: React.FC<HeaderProps> = ({ variant = 'default' }) => {
                     >
                         About
                     </Link>
+                    {/*}
                     <Link
                         to="/cyber"
                         className={`nav-link ${
@@ -97,6 +98,38 @@ const Header: React.FC<HeaderProps> = ({ variant = 'default' }) => {
                     >
                         Cyber Division
                     </Link>
+                    {*/}
+                    <div className="group relative">
+                        <span
+                            className={`nav-link cursor-pointer ${
+                                isActivePath('/cyber') ? 'active-cyber' : ''
+                            } group-hover:text-cyber-blue`}
+                        >
+                            Cyber Division
+                        </span>
+
+                        <div className="absolute left-0 z-50 mt-2 w-56 transform rounded-md border border-cyber-blue bg-cyber-dark py-2 opacity-0 shadow-lg transition-all duration-200 ease-in-out group-hover:translate-y-0 group-hover:opacity-100">
+                            <Link
+                                to="/cyber"
+                                className="block px-4 py-2 text-sm text-white hover:bg-cyber-blue hover:text-white"
+                            >
+                                Overview
+                            </Link>
+                            <Link
+                                to="/cyber/cisot"
+                                className="block px-4 py-2 text-sm text-[#208e2e] hover:bg-[#208e2e]/90 hover:text-white"
+                            >
+                                CISOT™
+                            </Link>
+                            <Link
+                                to="/cyber/vcisot"
+                                className="block px-4 py-2 text-sm text-[#b87333] hover:bg-[#b87333]/90 hover:text-white"
+                            >
+                                vCISOT™
+                            </Link>
+                        </div>
+                    </div>
+
                     <Link
                         to="/next"
                         className={`nav-link ${isActivePath('/next') ? 'active' : ''}`}

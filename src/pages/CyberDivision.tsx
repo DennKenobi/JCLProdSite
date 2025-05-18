@@ -99,9 +99,18 @@ const CyberDivision: React.FC = () => {
                                         <CheckCircle className="h-6 w-6" />
                                     </div>
                                     <div>
+                                        {/*
                                         <span className="font-bold text-white">
                                             CISOT™
                                         </span>{' '}
+                                        – Chief of Information Security for OT
+                                        */}
+                                        <a
+                                            href="/cyber/cisot"
+                                            className="font-bold text-[#208e2e] underline transition-colors duration-200 hover:text-green-400"
+                                        >
+                                            CISOT™
+                                        </a>{' '}
                                         – Chief of Information Security for OT
                                     </div>
                                 </div>
@@ -111,9 +120,19 @@ const CyberDivision: React.FC = () => {
                                         <CheckCircle className="h-6 w-6" />
                                     </div>
                                     <div>
+                                        {/*
                                         <span className="font-bold text-white">
                                             vCISOT™
                                         </span>{' '}
+                                        – Virtual Chief of Information Security
+                                        for OT
+                                        */}
+                                        <a
+                                            href="/cyber/vcisot"
+                                            className="font-bold text-[#b87333] underline transition-colors duration-200 hover:text-amber-400"
+                                        >
+                                            vCISOT™
+                                        </a>{' '}
                                         – Virtual Chief of Information Security
                                         for OT
                                     </div>
