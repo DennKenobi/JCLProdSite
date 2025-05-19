@@ -18,6 +18,7 @@ import { useNavigate } from 'react-router-dom';
 //import ParallaxBackground from '../components/ParallaxBackground';
 import vCISOTBadge from '../assets/vCISOTBadge.svg';
 import BackgroundImage from '../assets/vCISOT-BG-Image.jpg';
+import EngagementDiagram from '../assets/vCISOT-Engagement-3-Dark.svg';
 import { useScrollSpy } from '../hooks/useScrollSpy';
 
 // Placeholder for CISOT badge - replace with actual asset
@@ -840,9 +841,18 @@ function VCISOTService() {
                                             </p>
 
                                             {/* Placeholder for future org chart */}
+                                            {/*}
                                             <div className="mt-12 text-center text-sm italic text-gray-400">
                                                 [Future diagram: CISOT reporting
                                                 & relationship models]
+                                            </div>
+                                            */}
+                                            <div className="mt-12 flex justify-center overflow-hidden">
+                                                <img
+                                                    src={EngagementDiagram}
+                                                    alt="vCISOT Engagement Spectrum"
+                                                    className="-mb-20 -mt-28 max-w-full scale-110 md:max-w-3xl"
+                                                />
                                             </div>
                                         </div>
 

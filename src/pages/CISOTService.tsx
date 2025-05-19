@@ -18,6 +18,9 @@ import CyberLogo from '../assets/CyberDivisionHorizonTransp.png';
 import ParallaxBackground from '../components/ParallaxBackground';
 import CISOTBadge from '../assets/CISOTBadge.svg';
 import BackgroundImage from '../assets/CISOT-BG-Image.jpg';
+import CISOTStrategicDiagram from '../assets/CISOT-StrategicPos.svg';
+import CISOTLifecycleDiagram from '../assets/WhatCISOT-Does.svg';
+
 import { useScrollSpy } from '../hooks/useScrollSpy';
 
 // Placeholder for CISOT badge - replace with actual asset
@@ -287,7 +290,7 @@ const CISOTService: React.FC = () => {
                                     {/* Responsibilities Section */}
                                     <div
                                         ref={responsibilitiesRef}
-                                        className={`relative mb-16 min-h-[50vh] scroll-mt-[140px] rounded-md transition-all duration-500 ease-in-out ${
+                                        className={`relative mb-16 min-h-[50vh] scroll-mt-[140px] rounded-md pb-14 transition-all duration-500 ease-in-out ${
                                             activeId === 'responsibilities'
                                                 ? 'bg-cyber-dark bg-opacity-60'
                                                 : 'opacity-80'
@@ -390,6 +393,13 @@ const CISOTService: React.FC = () => {
                                                 </p>
                                             </div>
                                         </div>
+                                        <div className="mt-0 flex justify-center overflow-hidden">
+                                            <img
+                                                src={CISOTLifecycleDiagram}
+                                                alt="What the CISOT Does Diagram"
+                                                className="-mb-10 -mt-10 max-w-full"
+                                            />
+                                        </div>
 
                                         <div
                                             className={`absolute bottom-0 left-0 h-0.5 w-full transition-all duration-500 ${
@@ -403,7 +413,7 @@ const CISOTService: React.FC = () => {
                                     {/* Strategic Positioning */}
                                     <div
                                         ref={positioningRef}
-                                        className={`relative mb-16 min-h-[50vh] scroll-mt-[140px] rounded-md transition-all duration-500 ease-in-out ${
+                                        className={`relative mb-16 min-h-[50vh] scroll-mt-[140px] rounded-md pb-1 transition-all duration-500 ease-in-out ${
                                             activeId === 'positioning'
                                                 ? 'bg-cyber-dark bg-opacity-50'
                                                 : 'opacity-80'
@@ -492,14 +502,23 @@ const CISOTService: React.FC = () => {
                                             </ul>
 
                                             {/* Placeholder for future org chart */}
+                                            {/*
                                             <div className="mt-12 text-center text-sm italic text-gray-400">
                                                 [Future diagram: CISOT reporting
                                                 & relationship models]
                                             </div>
+                                            */}
+                                            <div className="mt-12 flex justify-center overflow-hidden">
+                                                <img
+                                                    src={CISOTStrategicDiagram}
+                                                    alt="CISOT Strategic Positioning Diagram"
+                                                    className="-mb-36 -mt-2 max-w-full scale-110 md:max-w-4xl"
+                                                />
+                                            </div>
                                         </div>
 
                                         <div
-                                            className={`absolute bottom-0 left-0 h-0.5 w-full transition-all duration-500 ${
+                                            className={`absolute bottom-0 left-0 mt-24 h-0.5 w-full transition-all duration-500 ${
                                                 activeId === 'positioning'
                                                     ? 'bg-[#208e2e] shadow-[0_0_10px_2px_#208e2e]'
                                                     : 'bg-transparent'
