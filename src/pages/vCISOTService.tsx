@@ -26,7 +26,10 @@ import { useScrollSpy } from '../hooks/useScrollSpy';
 
 function VCISOTService() {
     const sectionRef = useRef<HTMLElement>(null);
-    const isVisible = useIntersectionObserver(sectionRef, { threshold: 0.1 });
+    const isMobile = typeof window !== 'undefined' && window.innerWidth <= 768;
+    const isVisible = isMobile
+        ? true
+        : useIntersectionObserver(sectionRef, { threshold: 0.1 });
     const navigate = useNavigate();
     const responsibilitiesRef = useRef(null);
     const positioningRef = useRef(null);
@@ -160,6 +163,7 @@ function VCISOTService() {
                         <div className="w-full lg:w-4/5">
                             <div className="relative z-10 px-2 py-16">
                                 {/*<div className="container relative z-10 mx-auto px-4 py-16"> */}
+
                                 <div
                                     className={`mx-auto max-w-4xl transition-opacity duration-1000 ${
                                         isVisible ? 'opacity-100' : 'opacity-0'

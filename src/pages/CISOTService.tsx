@@ -28,7 +28,10 @@ import { useScrollSpy } from '../hooks/useScrollSpy';
 
 const CISOTService: React.FC = () => {
     const sectionRef = useRef<HTMLElement>(null);
-    const isVisible = useIntersectionObserver(sectionRef, { threshold: 0.1 });
+    const isMobile = typeof window !== 'undefined' && window.innerWidth <= 768;
+    const isVisible = isMobile
+        ? true
+        : useIntersectionObserver(sectionRef, { threshold: 0.1 });
     const navigate = useNavigate();
     const responsibilitiesRef = useRef(null);
     const positioningRef = useRef(null);
